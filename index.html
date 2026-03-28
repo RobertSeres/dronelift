@@ -30,10 +30,10 @@
         }
 
         :root {
-            --bg-primary: #1a1a1a;
-            --bg-secondary: #242424;
-            --bg-card: #2a2a2a;
-            --bg-card-hover: #333333;
+            --bg-primary: #121212;
+            --bg-secondary: #1a1a1a;
+            --bg-card: rgba(255, 255, 255, 0.04);
+            --bg-card-hover: rgba(255, 255, 255, 0.07);
             --text-primary: #ffffff;
             --text-secondary: #cfcfcf;
             --text-muted: #888888;
@@ -92,7 +92,7 @@
         }
 
         .nav.scrolled {
-            background: rgba(10, 10, 10, 0.85);
+            background: rgba(18, 18, 18, 0.95);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
@@ -219,7 +219,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(10, 10, 10, 0.98);
+            background: #121212;
             backdrop-filter: blur(20px);
             z-index: 999;
             padding: 40px 24px;
@@ -286,8 +286,8 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(to bottom,
-                    rgba(10, 10, 10, 0.3) 0%,
-                    rgba(10, 10, 10, 0.6) 50%,
+                    rgba(18, 18, 18, 0.3) 0%,
+                    rgba(18, 18, 18, 0.6) 50%,
                     var(--bg-primary) 100%);
         }
 
@@ -490,7 +490,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.85rem;
+            font-size: 1.2rem;
             font-weight: 800;
             color: var(--accent);
             text-transform: uppercase;
@@ -1064,6 +1064,44 @@
             color: var(--accent);
         }
 
+        /* ======================== SOCIAL LINKS ======================== */
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            transition: all var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent-glow);
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(102, 240, 87, 0.2);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
         /* ======================== COUNTER ANIMATION ======================== */
         .counter {
             font-variant-numeric: tabular-nums;
@@ -1445,6 +1483,24 @@
                             <small>Válasz 24 órán belül</small>
                         </div>
                     </div>
+                    <div class="contact-detail">
+                        <div class="social-links" style="margin-top: 8px;">
+                            <a href="https://www.facebook.com/people/DroneLift-Hungary/61579726652025/"
+                                class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/dronelifthungary" class="social-link" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="contact-form fade-up">
                     <h3>Ajánlatkérés</h3>
@@ -1490,6 +1546,22 @@
                     <span class="footer-copy">&copy; 2026 DroneLift. Minden jog fenntartva. | EMAIL: <a
                             href="mailto:info@dronelifthungary.hu"
                             style="color: var(--accent); font-weight: 600;">info@dronelifthungary.hu</a></span>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/people/DroneLift-Hungary/61579726652025/" class="social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/dronelifthungary" class="social-link" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
                 </div>
                 <a href="tel:+36703278308" class="footer-phone">+36 70 327 8308</a>
             </div>
